@@ -84,8 +84,7 @@ nav ul li:hover {
 }
 
 fieldset {
-  /* background-image: url('../img/pexels-photo-jeu-map.jpeg');
-  background-image: cover; */
+
   margin: 1em;
   padding: 2em;
 }
@@ -175,13 +174,13 @@ input {
 }
 #mappy {
   height: 70vh;
-  width: 90vw;
+  width: 70vw;
   margin: 1em;
   background-color: var(--alternative-color);
 }
 #map {
   height: 68vh;
-  width: 90vw;
+  width: 68vw;
 }
 #starred {
   background-color: #ffffff;

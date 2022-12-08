@@ -61,10 +61,10 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap",
 }).addTo(map);
 
-let gameMarker = L.icon({
-  iconUrl: 'https://img.icons8.com/clouds/100/000000/map-pin.png',
-  iconSize:     [100, 100], // size of the icon
-  iconAnchor:   [19, 17], // point of the icon which will correspond to marker's location  
+var gameMarker = L.icon({
+  iconUrl: '../img/pexels-photo-dé.jpeg',
+  iconSize:     [50, 50], // size of the icon
+  iconAnchor:   [19, 17], // point of the icon which will correspond to marker's location
   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
   });
 
@@ -74,7 +74,7 @@ fetch("../back/display.php")
 })
 .then((data) => {
   data.map(place => 
-    L.marker([place.lat, place.lng, {icon: gameMarker}]).bindPopup(`${place.name}<br>${place.adress}`).addTo(map))
+    L.marker([place.lat, place.lng, {icon: gameMarker}]).addTo(map).bindPopup(`<div class="popup flex flex-column"><img src='${place.image}'<br><strong>${place.name}</strong><br>${place.adress}</div>`))
 });
 
 // L.marker([place.lat, place.lng], {icon: gameMarker}).addTo(map);
