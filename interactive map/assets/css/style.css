@@ -9,8 +9,8 @@
 
 :root {
   --primary-color: #d8f7f7;
-  --secondary-color: #f0ffff;
-  --alternative-color: #1d1a1f;
+  --secondary-color: #f8e80a;
+  --alternative-color: #5c4a80;
 }
 
 h1,
@@ -20,6 +20,11 @@ h4,
 h5,
 h6 {
   font-weight: 500;
+}
+
+h2 {
+  color: var(--alternative-color)
+  
 }
 .flex {
   display: flex;
@@ -45,18 +50,20 @@ header {
   top: 0;
 }
 .logo {
-  font-family: 'Rubik Dirt', cursive;
-  font-size: 2.5rem;
-  text-shadow: #000;
-  color: var(--alternative-color);
+  font-family: 'Nerko one', cursive;
+  font-size: 3rem;
+  text-shadow: 1px 1px 2px #000;
+  color: var(--secondary-color);
 }
 nav {
+  background-image: url("assets/img/old-paris-map.jpg");
   height: 75px;
+  overflow-y: hidden;
   display: grid;
   padding: 1em;
   grid-template-columns: 12fr 5fr;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #d8eff1; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 nav ul {
@@ -174,13 +181,15 @@ input {
 }
 #mappy {
   height: 70vh;
-  width: 70vw;
+  width: 67vw;
   margin: 1em;
-  background-color: var(--alternative-color);
+  background-color: var(--primary-color);
+  border-radius: 2px;
 }
 #map {
   height: 68vh;
-  width: 68vw;
+  width: 69vw;
+ 
 }
 #starred {
   background-color: #ffffff;
@@ -204,8 +213,16 @@ input {
   width: 100%;
   border-radius: 10px;
 }
+
+.crop {
+  max-width: 300px;
+  max-height: 80px;
+  border-radius: 10px;
+  overflow-y : hidden;
+  margin-bottom: 10px;
+}
 #account {
-  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
   
 }
 
